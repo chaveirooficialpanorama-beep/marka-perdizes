@@ -132,6 +132,21 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     overflow: hidden;
 }
 
+/* Correção: garantir que a foto da seção 'about' não encolha
+   e seja exibida responsiva sem ficar espremida */
+.emp__about__foto-container {
+    flex: 0 0 auto;
+    max-width: 625px;
+    width: 100%;
+}
+.emp__about__foto-container img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: block;
+}
+
 .emp__banner .faixa-preliminar,
 .emp__about__foto-container .faixa-preliminar,
 .emp__relateds .card .faixa-preliminar,
